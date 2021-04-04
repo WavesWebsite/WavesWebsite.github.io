@@ -1,0 +1,134 @@
+body, head{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    background: linear-gradient(120deg,#5aa9df, #022349);
+    height: 100vh;
+    overflow: hidden;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.donate a{
+    color:rgb(21, 57, 90);
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.img-cen{
+    align-items: right;
+}
+.social-menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(48, 44, 44, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #206391;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    color:rgb(98, 128, 211);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.nav-links a{
+    color:rgb(199, 195, 195);
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color:rgb(199, 195, 195);
+    margin: 5px;
+}
+
+@media screen and (max-width:1024){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #dd671880;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%)
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
